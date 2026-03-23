@@ -23,10 +23,13 @@ export function CompanyCard({
   external = false,
   allowWidth,
 }: CompanyCardProps) {
-  const linkContent = <img src="/Icon-24x24.png" width="24" height="24" alt="" />;
+  const linkContent = <img src="/chevron-right.svg" width="24" height="24" alt="" />;
+  const ariaLabel = external
+    ? `Visit ${title} (opens in a new tab)`
+    : `Visit ${title}`;
 
-  return (
-    <article className={classes.cardWrapper}>
+  const content = (
+    <>
       <span className={classes.cardImageWrapper}>
         <Image
           src={imageUrl}
@@ -45,19 +48,27 @@ export function CompanyCard({
           {description}
         </p>
       </div>
+      <span className={classes.cardIcon} aria-hidden="true">
+        {linkContent}
+      </span>
+    </>
+  );
+
+  return (
+    <article>
       {external ? (
         <a
           href={href}
           target="_blank"
-          className={classes.btnLink}
+          className={classes.cardLink}
           rel="noopener noreferrer"
-          aria-label={`Visit ${title} (opens in a new tab)`}
+          aria-label={ariaLabel}
         >
-          {linkContent}
+          {content}
         </a>
       ) : (
-        <Link href={href} className={classes.btnLink} aria-label={`Visit ${title}`}>
-          {linkContent}
+        <Link href={href} className={classes.cardLink} aria-label={ariaLabel}>
+          {content}
         </Link>
       )}
     </article>

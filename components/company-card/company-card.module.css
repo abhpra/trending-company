@@ -1,8 +1,10 @@
-.cardWrapper {
+.cardLink {
   display: flex;
   align-items: center;
   gap: 14px;
   min-height: 40px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .cardContent {
@@ -44,11 +46,8 @@
   white-space: nowrap;
 }
 
-.btnLink {
+.cardIcon {
   margin-left: auto;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
   color: #a7a7a7;
   display: inline-flex;
   align-items: center;
@@ -56,7 +55,7 @@
   flex-shrink: 0;
 }
 
-.btnLink:focus-visible {
+.cardLink:focus-visible {
   outline: 2px solid #010101;
   outline-offset: 3px;
   border-radius: 4px;
