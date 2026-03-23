@@ -1,6 +1,6 @@
 import React from "react";
 import { CompanyCard } from "../../components/company-card/company-card";
-import { CompanySummary } from "../../lib/companies";
+import { CompanySummary } from "../../lib/company-selectors";
 import classes from "./company-list.module.css";
 
 type CompanyListProps = {

@@ -1,5 +1,5 @@
 import { Inter } from "@next/font/google";
-import { getTrendingCompaniesSummary } from "../lib/companies";
+import { getTrendingCompaniesSummary } from "../lib/company-selectors";
 import { CompanyList } from "./_components/company-list";
 import classes from "./page.module.css";
 

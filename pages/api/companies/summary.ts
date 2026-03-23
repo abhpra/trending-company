@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { CompanySummary, getTrendingCompaniesSummary } from "../../../lib/companies";
+import { CompanySummary, getTrendingCompaniesSummary } from "../../../lib/company-selectors";
 
 interface ResponseData {
   data: CompanySummary[];

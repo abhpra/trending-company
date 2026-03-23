@@ -1,4 +1,4 @@
-import { Company, companies } from "./companies-data";
+import { Company, companies } from "./company-data";
 
 export interface CompanySummary
   extends Pick<Company, "logoDarkUrl" | "companyId" | "companyName" | "description" | "infoUrl"> {}
